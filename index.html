@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOLSYSTEM</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="logo.png" alt="ECOLSYSTEM" class="logo">
+            <h1>ECOLSYSTEM</h1>
+        </div>
+        <nav>
+            <a href="#dashboard" class="active">
+                <i class="fas fa-home"></i>
+                <span>Tableau de bord</span>
+            </a>
+            <a href="#edt">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Emploi du temps</span>
+            </a>
+            <a href="#notes">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Notes</span>
+            </a>
+            <a href="#devoirs">
+                <i class="fas fa-book"></i>
+                <span>Devoirs</span>
+            </a>
+            <a href="#vie-scolaire">
+                <i class="fas fa-user-graduate"></i>
+                <span>Vie scolaire</span>
+            </a>
+            <a href="#messages">
+                <i class="fas fa-comments"></i>
+                <span>Messages</span>
+            </a>
+        </nav>
+        <div class="version">Version 2.0</div>
+        <div class="profile-menu">
+            <a href="#profile">
+                <i class="fas fa-user"></i>
+                Mon profil
+            </a>
+            <a href="#settings">
+                <i class="fas fa-cog"></i>
+                Paramètres
+            </a>
+            <div class="menu-divider"></div>
+            <a href="#" onclick="handleLogout(event)">
+                <i class="fas fa-sign-out-alt"></i>
+                Déconnexion
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="top-header">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Rechercher...">
+            </div>
+            <div class="user-info">
+                <div class="notifications">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </div>
+                <img src="avatar.png" alt="Profile" class="user-avatar">
+                <div class="user-details">
+                    <span class="user-name">M. Ndiaye</span>
+                    <span class="user-role">Proviseur</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="dashboard-container">
+            <div class="welcome-section">
+                <h1>Bienvenue, <span class="user-name">M. Ndiaye</span></h1>
+                <p class="date">Mercredi 15 Avril 2024</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Les cartes seront générées dynamiquement ici -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Templates pour différents types de contenu -->
+    <template id="edt-template">
+        <div class="edt-container">
+            <div class="edt-header">
+                <h2>Emploi du temps</h2>
+                <div class="edt-controls">
+                    <button class="btn-prev"><i class="fas fa-chevron-left"></i></button>
+                    <span class="current-week">Semaine du 15 au 21 Avril</span>
+                    <button class="btn-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="edt-grid">
+                <!-- L'EDT sera généré ici -->
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html> 
